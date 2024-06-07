@@ -94,22 +94,60 @@ h2 {
 
 
 .circle {
-    animation: spin 4s linear infinite; /* Aplica la animación de giro */
     transform-origin: center;
     justify-self: center;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg); /* Estado inicial */
-    }
-    100% {
-        transform: rotate(360deg); /* Estado final */
-    }
-}
+
 .circle-container {
     justify-self: center;
     width: 50%;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.circle-container .rotate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spin 10s linear infinite;
+}
+.circle-container .rotate-slow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spin-slow 15s linear infinite;
+}
+.circle-container .rotate-fast {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spin-slow 5s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin-fast {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 .panel-control {
     display: flex;
@@ -126,4 +164,13 @@ pre {
     padding-right: 10%;
     font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
     line-height: 1.2; /* Ajusta el interlineado según sea necesario */
+}
+.particle {
+    position: absolute;
+    background-color: #ff6adab4;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity:1;
+    z-index: -1;
 }

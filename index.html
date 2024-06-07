@@ -26,6 +26,7 @@
         </section>
     </header>
     <main>
+        
         <div class="panel-control">
             <section id="noticias">
                 <h2></h2>
@@ -33,7 +34,7 @@
             </section>
                  
             <div class="circle-container">
-                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" class="circle">
+                <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" class="circle rotate">
                     <!-- Definición del degradado radial -->
                     <defs>
                         <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
@@ -42,9 +43,19 @@
                         </radialGradient>
                     </defs>
                     <!-- Círculo con degradado radial -->
-                    <circle cx="50" cy="50" r="40" fill="url(#grad1)" />
-                    <!-- Línea para percibir el giro -->
-                    <line x1="50" y1="50" x2="90" y2="50" stroke="#ff008c" stroke-width="2" />
+                    <circle cx="300" cy="300" r="250" fill="url(#grad1)" />
+                </svg>
+                <!-- Segundo SVG: Superpuesto con diferente animación -->
+                <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" class="circle rotate-slow">
+                    <circle cx="10" cy="10" r="150" fill="url(#grad1)" />   
+                </svg>
+                 <!-- Segundo SVG: Superpuesto con diferente animación -->
+                 <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" class="circle rotate">
+                    <circle cx="350" cy="350" r="500" fill="url(#grad1)" />   
+                </svg>
+                 <!-- Segundo SVG: Superpuesto con diferente animación -->
+                 <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" class="circle rotate-fast">
+                    <circle cx="350" cy="350" r="500" fill="url(#grad1)" />   
                 </svg>
             </div>
         </div>      
