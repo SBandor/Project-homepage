@@ -1,3 +1,4 @@
+/* PAGINA EN GENERAL */ /*---------------------------------------------------------------------------------------------------------------------------*/
 body, html {
     margin: 0;
     padding-top: 20px;
@@ -8,10 +9,26 @@ body, html {
     color:#ffe4b2;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /*justify-content: center;*/
+    align-items: center;  
 }
-body {
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    width: 90%;
+    text-align: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FONDO CUADRICULADO, EFECTOS DE CAMBIO DE COLOR Y SOMBREADO */
+body { /* FONDO CUADRICULADO CON DEGRADADO*/
     margin: 0;
     height: 100vh;
     background-color: #1a1a1a;
@@ -20,7 +37,7 @@ body {
     background-repeat: no-repeat; 
     z-index: -1;         
 }
-.background-sombras {
+.background-sombras { /* FONDO DE SOMBRAS CAMBIANTES */ 
     position: absolute;
     top: 0;
     left: 0;
@@ -29,42 +46,18 @@ body {
     background: linear-gradient(90deg, #3a003080, #3b00198e, #28014788, #4101357e);
     background-size: 2500% 2500%;
     animation: gradient 50s ease infinite;
-    z-index: -2;
-    
+    z-index: -2; 
 }
-
 @keyframes gradient {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }   
 }
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0);
-    
-    padding: 0px;
-    width: 90%;
-    text-align: center;
-    margin-bottom: 1em;
-   
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-   /* align-items: center;*/
-    justify-content: center;
-    width: 90%;
-
-}
-
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FONDO  DE SECCIONES */
 section {
-    /*background-color: rgba(255, 255, 255, 0.1);*/
-    border-radius: 10px;
+    text-align: center;
+    border-radius: 5px;
     padding: 1em;
     width: 100%;
     margin-bottom: 1em;
@@ -78,37 +71,38 @@ section {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-h2 {
-    border-bottom: 1px solid #ff008c;
-    padding-bottom: 0.5em;
-    margin-bottom: 0px;
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* CONTENEDOR DE ANIMACION CENTRAL Y CONTROL DE WIDGETS */
+.control-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: relative; 
 }
-
-
-.circle-container {
-    justify-self: center;
+.spin-container{
+    display: grid;
     width: 100%;
     position: relative;
-    width: 300px;
-    height: 300px;
 }
-
-.panel-control {
-    display: flex;
-    flex-direction: column;
-   
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* CONTENEDOR DE ANIMACION CENTRAL, PANEL DE CONTROL DE WIDGETS */
+#spin-animation{
+    justify-self: center;
+    order: 2; 
 }
-#noticias {
+#section-left {
     justify-self: left;
     width: 25%;
+    order: 1;
 }
-pre {
-    display: flex;
-    justify-content: center;
-    padding-right: 10%;
-    font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
-    line-height: 1.2; /* Ajusta el interlineado según sea necesario */
+#section-right {
+    justify-self: right;
+    width: 25%;
+    order: 3;
 }
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* WIDGETS Y EFECTOS ESPECIALES EN JAVASCRIPT */
 .particle {
     position: absolute;
     background-color: #ff6adab4;
@@ -117,4 +111,29 @@ pre {
     border-radius: 50%;
     opacity:1;
     z-index: -1;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.widget-tiempo-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 2%;
+    padding-right: 2%;
+}
+#widget-tiempo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+}
+#reloj {
+    font-size: 60px;
+}
+#clima {
+    font-size: 20px;
 }

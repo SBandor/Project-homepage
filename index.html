@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
     <link rel="stylesheet" href="styles.css">
-   
 </head>
 <body>
     <div class="background-sombras"></div>
@@ -13,25 +12,35 @@
         <div class="logo-container">
             <object type="image/svg+xml" data="../Project-homepage/svg-patterns/bandorsoft-logo.svg"></object>
         </div>
-        <section id="widgets">
-            <div id="reloj"></div>
-            <div id="clima"></div>
-        </section>
-    </header>
-    <main>
-        
-        <div class="panel-control">
-            <div class="circle-container">
-                <object type="image/svg+xml" data="../Project-homepage/spin-animation.svg"></object>
+        <div class="widget-tiempo-container">
+            <div id="widget-tiempo">
+                <div id="reloj"></div>
+                <div id="clima"></div>
             </div>
-            
-            <section id="noticias">
-                <h2></h2>
-                <div id="contenedor-noticias"></div>
-            </section>
-                 
-            
-        </div>      
+        </div>
+        
+    </header>
+    <main> 
+            <div class="control-container"> 
+                <section id="section-left">
+                    <h2>Seccion izquierda arriba</h2>
+                    <div id="contenedor-noticias"></div>
+                </section>  
+                <section id="section-left">  
+                    <h2>Seccion derecha arriba</h2> 
+                </section> 
+            </div>
+            <div class="spin-container">
+                <object id="spin-animation" type="image/svg+xml" data="../Project-homepage/spin-animation.svg"></object>
+            </div>
+            <div class="control-container">
+                <section id="section-right">  
+                    <h2>Seccion izquierda abajo</h2>   
+                </section>  
+                <section id="section-right"> 
+                    <h2>Seccion derecha abajo</h2>     
+                </section>   
+            </div>        
     </main>
     <script src="script.js"></script>
 </body>
