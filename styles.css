@@ -55,7 +55,15 @@ body { /* FONDO CUADRICULADO CON DEGRADADO*/
     100% { background-position: 0% 50%; }   
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* FONDO  DE SECCIONES */
+/* LOGO PRINCIPAL  */
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* SECCIONES Y TITULOS H2  */
 section {
     font-size: 12px;
     color: rgb(167, 255, 243);
@@ -80,7 +88,7 @@ h2 {
     text-align: center;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* CONTENEDOR DE ANIMACION CENTRAL Y SECCIONES */
+/* CONTENEDOR DE ANIMACION CENTRAL Y APARTADOS ALREDEDOR */
 .control-container {
     display: flex;
     flex-direction: row;
@@ -94,7 +102,7 @@ h2 {
     position: relative;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* ORDEN DE LOS ELEMENTOS PRINCIPALES, ANIMACION CENTRAL Y SECCIONES ALREDEDOR */
+/* ORDEN DE LOS ELEMENTOS PRINCIPALES, ANIMACION CENTRAL Y APARTADOS ALREDEDOR */
 #spin-animation{
     justify-self: center;
     order: 2; 
@@ -120,12 +128,6 @@ h2 {
     opacity:1;
     z-index: -1;
 }
-.logo-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
 .widget-tiempo-container{
     position: absolute;
     top: 0;
@@ -133,6 +135,7 @@ h2 {
     padding-top: 2%;
     padding-right: 2%;
 }
+/* WIDGET: RELOJ Y CLIMA */
 #widget-tiempo{
     display: flex;
     flex-direction: column;
@@ -154,3 +157,5 @@ h2 {
     font-size: 15px;
     text-shadow: 0 0 10px rgba(255, 0, 149, 0.5);
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
