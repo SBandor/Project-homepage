@@ -1,3 +1,4 @@
+@import url('http://fonts.googleapis.com/css?family=Kode+Mono');
 /* PAGINA EN GENERAL */ /*---------------------------------------------------------------------------------------------------------------------------*/
 body, html {
     margin: 0;
@@ -5,7 +6,7 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    font-family:'Kode Mono';
     color:#ffe4b2;
     display: flex;
     flex-direction: column;
@@ -56,13 +57,14 @@ body { /* FONDO CUADRICULADO CON DEGRADADO*/
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* FONDO  DE SECCIONES */
 section {
-    text-align: center;
-    border-radius: 5px;
-    padding: 1em;
+    font-size: 12px;
+    color: rgb(167, 255, 243);
+    
+    border-radius: 3px;
+    padding: 10px;
     width: 100%;
-    margin-bottom: 1em;
-    box-shadow: 0 0 10px rgba(255, 0, 149, 0.5);
-    background: linear-gradient(90deg, #300021be, #35002cb2, #310017b4, #3f003fb9);
+    box-shadow: 0 0 5px rgba(255, 0, 149, 0.5);
+    background: linear-gradient(90deg, #30002198, #35002c94, #31001798, #3f003f88);
     background-size: 400% 400%;
     animation: gradient-2 10s ease infinite;
 }
@@ -71,8 +73,14 @@ section {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+h2 {
+    font-size: 16px;
+    color: rgb(255, 32, 125);
+    text-shadow:0px 3px 5px rgba(255, 0, 76, 0.842); ;
+    text-align: center;
+}
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* CONTENEDOR DE ANIMACION CENTRAL Y CONTROL DE WIDGETS */
+/* CONTENEDOR DE ANIMACION CENTRAL Y SECCIONES */
 .control-container {
     display: flex;
     flex-direction: row;
@@ -86,7 +94,7 @@ section {
     position: relative;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* CONTENEDOR DE ANIMACION CENTRAL, PANEL DE CONTROL DE WIDGETS */
+/* ORDEN DE LOS ELEMENTOS PRINCIPALES, ANIMACION CENTRAL Y SECCIONES ALREDEDOR */
 #spin-animation{
     justify-self: center;
     order: 2; 
@@ -102,7 +110,7 @@ section {
     order: 3;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* WIDGETS Y EFECTOS ESPECIALES EN JAVASCRIPT */
+/* WIDGETS SVGs Y EFECTOS ESPECIALES EN JAVASCRIPT */
 .particle {
     position: absolute;
     background-color: #ff6adab4;
@@ -130,10 +138,19 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: right;
+    box-shadow: 0 0 20px rgba(255, 0, 149, 0.5);
+    padding-right:15px;
+    padding-left:15px;
+    padding-bottom: 10px;
+    background: linear-gradient(90deg, #3000210e, #35002c13, #3100170e, #3f003f0a);
+    animation: gradient-2 10s ease infinite;
+    border-radius: 10px;
 }
 #reloj {
     font-size: 60px;
+    text-shadow: 0 0 10px rgba(255, 0, 149, 0.692);
 }
 #clima {
-    font-size: 20px;
+    font-size: 15px;
+    text-shadow: 0 0 10px rgba(255, 0, 149, 0.5);
 }
