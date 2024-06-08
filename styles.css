@@ -11,23 +11,16 @@ body, html {
     align-items: center;
     /*justify-content: center;*/
 }
-
 body {
     margin: 0;
     height: 100vh;
     background-color: #1a1a1a;
     background-image: url('cuadricula-pattern.svg'), linear-gradient(to top, #06010f,    #690e0e, #a1035a);
     background-size: 100% 100%, cover;
-    background-repeat: no-repeat;
-    
-    z-index: -1;
-
- 
-           
+    background-repeat: no-repeat; 
+    z-index: -1;         
 }
-
-.background {
-   
+.background-sombras {
     position: absolute;
     top: 0;
     left: 0;
