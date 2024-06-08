@@ -1,0 +1,79 @@
+  
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" >
+    <style>
+            .circle {
+                transform-origin: center;
+                justify-self: center;
+                
+            }
+            .rotate {
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: spin 10s linear infinite;
+            }
+            .rotate-slow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: spin-slow 15s linear infinite;
+            }
+            .rotate-fast {
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: spin-fast 5s linear infinite;
+            }
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes spin-slow {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes spin-fast {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+    </style>
+    <!-- Definición del degradado radial -->
+                    <defs>
+                        <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                            <stop offset="0%" style="stop-color:rgb(153, 0, 255);stop-opacity:0" />
+                            <stop offset="100%" style="stop-color:rgb(173, 0, 115);stop-opacity:0.5" />
+                        </radialGradient>
+                         <mask id="sliceMask">
+                            <rect width="100%" height="100%" fill="white"/>
+                            <path d="M150,150 L150,0 A150,150 0 0,1 300,150 z" fill="black"/>
+                        </mask>
+                    </defs>
+                    <!-- Círculo con degradado radial -->
+                    
+                    <circle cx="150" cy="150" r="150" fill="url(#grad1)" class="circle rotate" mask="url(#sliceMask)" />
+                    
+                <!-- Segundo SVG: Superpuesto Círculo con degradado radial con diferente animación -->
+               
+                    <circle cx="150" cy="150" r="100" fill="url(#grad1)" class="circle rotate-slow" mask="url(#sliceMask)" />   
+               
+                 <!-- Segundo SVG: Superpuesto Cuadrado con diferente animación -->
+                
+                    <rect x="100" y="100" width="100" height="100" fill="url(#grad1)" class="circle rotate" /> 
+               
+                 <!-- Segundo SVG: Superpuesto Cuadrado con diferente animación -->
+               
+                    <rect x="100" y="100" width="100" height="100" fill="url(#grad1)" class="circle rotate-fast" />
+                
+</svg>

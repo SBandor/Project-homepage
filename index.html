@@ -10,17 +10,10 @@
 <body>
     <div class="background-sombras"></div>
     <header>
-       
+        <div class="logo-container">
+            <object type="image/svg+xml" data="../Project-homepage/svg-patterns/bandorsoft-logo.svg"></object>
+        </div>
         <section id="widgets">
-            <h1></h1>
-            <pre>
-                 ____                  _                       __ _   
-                |  _ \                | |                     / _| |  
-                | |_) | __ _ _ __   __| | ___  _ __ ___  ___ | |_| |_ 
-                |  _ < / _` | '_ \ / _` |/ _ \| '__/ __|/ _ \|  _| __|
-                | |_) | (_| | | | | (_| | (_) | |  \__ \ (_) | | | |_ 
-                |____/ \__,_|_| |_|\__,_|\___/|_|  |___/\___/|_|  \__|
-               </pre>
             <div id="reloj"></div>
             <div id="clima"></div>
         </section>
@@ -28,36 +21,16 @@
     <main>
         
         <div class="panel-control">
+            <div class="circle-container">
+                <object type="image/svg+xml" data="../Project-homepage/spin-animation.svg"></object>
+            </div>
+            
             <section id="noticias">
                 <h2></h2>
                 <div id="contenedor-noticias"></div>
             </section>
                  
-            <div class="circle-container">
-                <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" class="circle rotate">
-                    <!-- Definición del degradado radial -->
-                    <defs>
-                        <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                            <stop offset="0%" style="stop-color:rgb(153, 0, 255);stop-opacity:0" />
-                            <stop offset="100%" style="stop-color:rgb(173, 0, 115);stop-opacity:0.5" />
-                        </radialGradient>
-                    </defs>
-                    <!-- Círculo con degradado radial -->
-                    <circle cx="300" cy="300" r="250" fill="url(#grad1)" />
-                </svg>
-                <!-- Segundo SVG: Superpuesto con diferente animación -->
-                <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" class="circle rotate-slow">
-                    <circle cx="10" cy="10" r="150" fill="url(#grad1)" />   
-                </svg>
-                 <!-- Segundo SVG: Superpuesto con diferente animación -->
-                 <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" class="circle rotate">
-                    <circle cx="350" cy="350" r="500" fill="url(#grad1)" />   
-                </svg>
-                 <!-- Segundo SVG: Superpuesto con diferente animación -->
-                 <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" class="circle rotate-fast">
-                    <circle cx="350" cy="350" r="500" fill="url(#grad1)" />   
-                </svg>
-            </div>
+            
         </div>      
     </main>
     <script src="script.js"></script>

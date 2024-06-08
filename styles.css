@@ -85,66 +85,17 @@ h2 {
 }
 
 
-
-.circle {
-    transform-origin: center;
-    justify-self: center;
-}
-
-
 .circle-container {
     justify-self: center;
-    width: 50%;
+    width: 100%;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 
-.circle-container .rotate {
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: spin 10s linear infinite;
-}
-.circle-container .rotate-slow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: spin-slow 15s linear infinite;
-}
-.circle-container .rotate-fast {
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: spin-slow 5s linear infinite;
-}
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-@keyframes spin-slow {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-@keyframes spin-fast {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
 .panel-control {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
    
 }
 #noticias {
