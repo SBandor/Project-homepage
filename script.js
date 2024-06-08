@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     actualizarReloj();
+    actualizarFecha();
     //obtenerNoticias();
     ambienteParticulas();
     obtenerClima();
 });
+setInterval(actualizarFecha,1000);
 
 function actualizarReloj() {
     const reloj = document.getElementById('reloj');
@@ -12,11 +14,43 @@ function actualizarReloj() {
         reloj.textContent = ahora.toLocaleTimeString();
     }, 1000);
 }
+function actualizarFecha() {
+    const dateContainer = document.getElementById('fecha');
+    const now = new Date();
+    
+    // Formatear la fecha
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = now.toLocaleDateString('es-ES', options);
+    
+    // Actualizar el contenido del contenedor de la fecha
+    dateContainer.textContent = formattedDate;
+}
 
 function obtenerClima() {
     const clima = document.getElementById('clima');
     // Aquí podrías hacer una petición a una API de clima
-    clima.textContent = 'Clima actual: Soleado, 25°C';
+    // URL que contiene los datos meteorológicos en formato JSON
+    const url = 'https://www.el-tiempo.net/api/json/v2/provincias/08'; // Reemplaza [CODPROV] con el código de tu provincia
+
+    // Realizar la solicitud GET usando Fetch API
+    fetch(url)
+    .then(response => {
+        // Verificar si la solicitud fue exitosa (código de estado HTTP 200)
+        if (!response.ok) {
+            throw new Error('No se pudo obtener la información meteorológica');
+        }
+        // Convertir la respuesta a JSON
+        return response.json();
+    })
+    .then(data => {
+        // Manipular los datos obtenidos aquí
+        console.log(data); // Mostrar los datos en la consola por ahora
+        // Luego, puedes procesar los datos y mostrarlos en tu página web
+        clima.textContent =  JSON.stringify(data.today.p); ;
+    })
+    .catch(error => {
+        console.error('Hubo un problema con la solicitud:', error);
+    });   
 }
 
 function ambienteParticulas(){
