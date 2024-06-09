@@ -34,7 +34,7 @@ body {
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* FONDO CUADRICULADO, EFECTOS DE CAMBIO DE COLOR Y SOMBREADO */
 html {/* FONDO CUADRICULADO CON DEGRADADO*/
-    background-image: url('cuadricula-pattern.svg'), linear-gradient(to bottom, #06010f,    #690e0e, #a1035a);
+    background-image: url('../Project-homepage/svg-patterns/cuadricula-pattern.svg'), linear-gradient(to bottom, #06010f,    #690e0e, #a1035a);
     background-size: 100% 500%, cover;
     background-repeat:repeat; 
     z-index: -1;  
