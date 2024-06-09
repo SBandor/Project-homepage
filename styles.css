@@ -10,8 +10,6 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;  
-    
-
 }
 header {
     display: flex;
@@ -52,8 +50,7 @@ html {/* FONDO CUADRICULADO CON DEGRADADO*/
     background: linear-gradient(90deg, #3a003080, #3b00198e, #28014788, #4101357e);
     background-size: 2500% 4500%;
     animation: gradient 50s ease infinite;
-    z-index: -2; 
-   
+    z-index: -2;  
 }
 @keyframes gradient {
     0% { background-position: 0% 50%; }
