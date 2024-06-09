@@ -4,8 +4,7 @@ body, html {
     margin: 0;
     padding-top: 20px;
     width: 100%;
-    height: 100%;
-   
+    height: 100vh;
     font-family:'Kode Mono';
     color:#ffe4b2;
     display: flex;
@@ -26,28 +25,29 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 90%;
-    row-gap: 100px;
-    
+    row-gap: 100px; 
+}
+body { 
+    padding-top: 100px;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* FONDO CUADRICULADO, EFECTOS DE CAMBIO DE COLOR Y SOMBREADO */
-body { /* FONDO CUADRICULADO CON DEGRADADO*/
-    margin: 0;
-    
-    background-color: #1a1a1a;
-    background-image: url('cuadricula-pattern.svg'), linear-gradient(to top, #06010f,    #690e0e, #a1035a);
-    background-size: 100% 100%, cover;
-    background-repeat: no-repeat; 
-    z-index: -1;         
+html {/* FONDO CUADRICULADO CON DEGRADADO*/
+    background-image: url('cuadricula-pattern.svg'), linear-gradient(to bottom, #06010f,    #690e0e, #a1035a);
+    background-size: 100% 500%, cover;
+    background-repeat:repeat; 
+    z-index: -1;  
+    height: 100vh;  
+    overflow:auto;
 }
 .background-sombras { /* FONDO DE SOMBRAS CAMBIANTES */ 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(90deg, #3a003080, #3b00198e, #28014788, #4101357e);
-    background-size: 2500% 2500%;
+    background-size: 2500% 4500%;
     animation: gradient 50s ease infinite;
     z-index: -2; 
 }
@@ -67,18 +67,33 @@ body { /* FONDO CUADRICULADO CON DEGRADADO*/
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* AREAS  */
+.Area-1 {
+    margin-bottom: 56px;
+}
 .Area-2 {
     display: flex;
-    height: 500px;
-    padding-bottom: 100px;
+    flex-direction: row;
+    justify-content: center;
+    height: 305px;
+    margin-bottom: 22px;
+    box-shadow: 0 0 40px rgba(255, 0, 149, 0.5);   
+}
+.Area-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 721px;
+    width: 100%;
+    margin-bottom: 200px;  
+}
+.Area-3>iframe {
+    box-shadow: 0 0 40px rgba(255, 0, 149, 0.5);    
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* SECCIONES Y TITULOS H2  */
 section {
     font-size: 12px;
-    color: rgb(167, 255, 243);
-    
-    border-radius: 3px;
+    color: rgb(167, 255, 243); 
     padding: 10px;
     width: 100%;
     box-shadow: 0 0 5px rgba(255, 0, 149, 0.5);
@@ -137,6 +152,7 @@ h2 {
     border-radius: 50%;
     opacity:1;
     z-index: -1;
+    overflow: hidden;
 }
 .widget-tiempo-container{
     position: absolute;
@@ -173,5 +189,4 @@ h2 {
     font-size: 11px;
     text-shadow: 0 0 10px rgba(255, 0, 149, 0.5);
 }
-
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
