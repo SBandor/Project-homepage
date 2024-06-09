@@ -71,10 +71,17 @@ html {/* FONDO CUADRICULADO CON DEGRADADO*/
     height: 150px;
 }
 .sub-logo {
-    width: 1050px;
-    color: #ff1c54;
+    font-size: 12px;
+    color: rgb(255, 8, 144); 
+    width: fit-content;
     margin:0;
     text-align: left;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 149, 0.5);
+    border-radius: 40px;
+    background: linear-gradient(90deg, #30002198, #35002c94, #31001798, #3f003f88);
+    background-size: 400% 400%;
+    animation: gradient-2 10s ease infinite;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* AREAS  */
@@ -106,7 +113,7 @@ section {
     font-size: 12px;
     color: rgb(167, 255, 243); 
     padding: 10px;
-    width: 100%;
+    width: fit-content;
     box-shadow: 0 0 5px rgba(255, 0, 149, 0.5);
     background: linear-gradient(90deg, #30002198, #35002c94, #31001798, #3f003f88);
     background-size: 400% 400%;
@@ -169,7 +176,7 @@ h2 {
 }
 .widget-tiempo-container{
     position: absolute;
-    top: 50px;
+    top: 20px;
     right: 50px;
     padding-top: 2%;
     padding-right: 2%;
