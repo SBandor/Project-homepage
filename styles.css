@@ -10,6 +10,8 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;  
+    
+
 }
 header {
     display: flex;
@@ -29,6 +31,7 @@ main {
 }
 body { 
     padding-top: 100px;
+    overflow:auto; 
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* FONDO CUADRICULADO, EFECTOS DE CAMBIO DE COLOR Y SOMBREADO */
@@ -37,8 +40,8 @@ html {/* FONDO CUADRICULADO CON DEGRADADO*/
     background-size: 100% 500%, cover;
     background-repeat:repeat; 
     z-index: -1;  
-    height: 100vh;  
-    overflow:auto;
+    height: 100vh; 
+    overflow:hidden; 
 }
 .background-sombras { /* FONDO DE SOMBRAS CAMBIANTES */ 
     position: absolute;
@@ -50,6 +53,7 @@ html {/* FONDO CUADRICULADO CON DEGRADADO*/
     background-size: 2500% 4500%;
     animation: gradient 50s ease infinite;
     z-index: -2; 
+   
 }
 @keyframes gradient {
     0% { background-position: 0% 50%; }
