@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 </head>
 <body class="background-sombras">
     <header>
         <div class="logo-container">
-            <object type="image/svg+xml" data="../Project-homepage/svg-patterns/bandorsoft-logo.svg"></object>
+            <object class="logo" type="image/svg+xml" data="../Project-homepage/svg-patterns/bandorsoft-logo.svg"></object>
         </div>
         <div class="widget-tiempo-container">
             <div id="widget-tiempo">
@@ -23,13 +25,12 @@
         <div class="Area-1">
             <div class="control-container"> 
                 <section id="section-left">
-                    <h2>Seccion izquierda arriba</h2>
-                    Esto es un texto de prueba para la sección a testear. <br> - Debería ser muy largo.
+                    <h2>Notícias</h2>
                     <div id="contenedor-noticias"></div>
                 </section>  
                 <section id="section-left">  
-                    <h2>Seccion derecha arriba</h2> 
-                    Esto es un texto de prueba para la sección.
+                    <h2>Anotaciones</h2> 
+                    <div id="editor-container" style="height: 200px;"></div>
                 </section> 
             </div>
             <div class="spin-container">

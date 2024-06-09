@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     actualizarReloj();
     actualizarFecha();
-    //obtenerNoticias();
+    obtenerNoticias();
     ambienteParticulas();
     obtenerClima();
+    editorTexto();
 });
 setInterval(actualizarFecha,1000);
 
@@ -105,5 +106,21 @@ function obtenerNoticias() {
         const noticiaElemento = document.createElement('div');
         noticiaElemento.innerHTML = `<h3>${noticia.titulo}</h3><p>${noticia.descripcion}</p>`;
         contenedorNoticias.appendChild(noticiaElemento);
+    });
+}
+function editorTexto(){
+    var quill = new Quill('#editor-container', {
+        theme: 'snow'
+    });
+    // Cargar el contenido guardado desde LocalStorage
+    var savedContent = localStorage.getItem('quillContent');
+    if (savedContent) {
+        quill.root.innerHTML = savedContent;
+    }
+
+    // Guardar el contenido en LocalStorage cada vez que se realice un cambio
+    quill.on('text-change', function() {
+        var content = quill.root.innerHTML;
+        localStorage.setItem('quillContent', content);
     });
 }
