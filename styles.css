@@ -29,7 +29,6 @@ main {
     margin-top:100px;
 }
 body { 
-    padding-top: 100px;
     overflow:auto; 
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -65,7 +64,6 @@ html {/* FONDO CUADRICULADO CON DEGRADADO*/
     align-items: center;
     justify-content: left;
     width: 100%;
-    
 }
 .logo {
     width: 1050px;
@@ -128,10 +126,10 @@ h2 {
 }
 .spin-container{
     display: grid;
-    width: 100%;
+    width: 350px;
     position: absolute;
-    top: 500px;
-    right: 0;
+    top: 450px;
+    right: 40%;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* ORDEN DE LOS ELEMENTOS PRINCIPALES, ANIMACION CENTRAL Y APARTADOS ALREDEDOR */
@@ -163,7 +161,7 @@ h2 {
 }
 .widget-tiempo-container{
     position: absolute;
-    top: 100px;
+    top: 50px;
     right: 50px;
     padding-top: 2%;
     padding-right: 2%;
