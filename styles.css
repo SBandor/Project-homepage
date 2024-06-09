@@ -13,7 +13,7 @@ body, html {
 }
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0px;
@@ -61,12 +61,20 @@ html {/* FONDO CUADRICULADO CON DEGRADADO*/
 /* LOGO PRINCIPAL  */
 .logo-container{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
     justify-content: left;
     width: 100%;
 }
 .logo {
+    width: 690px;
+    height: 150px;
+}
+.sub-logo {
     width: 1050px;
+    color: #ff1c54;
+    margin:0;
+    text-align: left;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* AREAS  */
